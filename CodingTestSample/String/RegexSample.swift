@@ -10,6 +10,9 @@ import Foundation
 
 class RegexSample {
 
+    // 参考
+    // https://qiita.com/shoheiyokoyama/items/5dc67fdc9e06a9dc5728
+
     //正規表現の検索をします
     func pregMatche(input: String, pattern: String, options: NSRegularExpression.Options = []) -> Bool {
         let regex = try! NSRegularExpression(pattern: pattern, options: options)

@@ -42,7 +42,8 @@ class ViewController: UIViewController {
         intSample.changeToBinaryNumber()
         intSample.changeToOctalNumber()
         intSample.changeToHexadecimal()
-        
+
+        // 正規表現
         let regexSample = RegexSample()
         let alphabet = "title=ABCDE&body=FGHIJ"
         if regexSample.pregMatche(input: alphabet, pattern: "ABCDE") {
