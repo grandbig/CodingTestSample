@@ -7,3 +7,35 @@
 //
 
 import Foundation
+
+class RegexSample {
+
+    //正規表現の検索をします
+    func pregMatche(input: String, pattern: String, options: NSRegularExpression.Options = []) -> Bool {
+        let regex = try! NSRegularExpression(pattern: pattern, options: options)
+        let matches = regex.matches(in: input, options: [], range: NSMakeRange(0, input.count))
+        return matches.count > 0
+    }
+
+    //正規表現の検索結果を利用できます
+    func pregMatche(input: String, pattern: String, options: NSRegularExpression.Options = [], matches: inout [String]) -> Bool {
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: options) else {
+            return false
+        }
+        let targetStringRange = NSRange(location: 0, length: input.count)
+        let results = regex.matches(in: input, options: [], range: targetStringRange)
+        for i in 0 ..< results.count{
+            for j in 0 ..< results[i].numberOfRanges{
+                let range = results[i].range(at: j)
+                matches.append((input as NSString).substring(with: range))
+            }
+        }
+        return results.count > 0
+    }
+
+    //正規表現の置換をします
+    func pregReplace(input: String, pattern: String, with: String, options: NSRegularExpression.Options = []) -> String {
+        let regex = try! NSRegularExpression(pattern: pattern, options: options)
+        return regex.stringByReplacingMatches(in: input, options: [], range: NSMakeRange(0, input.count), withTemplate: with)
+    }
+}
