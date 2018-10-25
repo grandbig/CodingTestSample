@@ -28,4 +28,18 @@ class OtherStringSample {
         print(str)
         // abcDEFG
     }
+
+    /// "I" or "l" or "i" のいずれかの文字列が含まれているかチェックする処理
+    /// 含まれている場合は caution と出力
+    /// 含まれていない場合は文字列をそのまま出力
+    func checkContainIli(input: String) {
+        let isExistUpperI = input.contains("I")
+        let isExistLowerL = input.contains("l")
+        let isExistLowerI = input.contains("i")
+        if isExistUpperI || isExistLowerL || isExistLowerI {
+            print("caution")
+        } else {
+            print(input)
+        }
+    }
 }
