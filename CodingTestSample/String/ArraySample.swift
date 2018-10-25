@@ -11,79 +11,67 @@ import Foundation
 class ArraySample {
 
     /// 昇順に並び替え
-    func ascSortArray() {
-        // 単純な配列の並び替えの場合
-        let input = [80, 100, 35, 68]
+    /// Ex. input: [80, 100, 35, 68] -> [35, 68, 80, 100]
+    func ascSortArray(input: [Int]) {
         let sortedArray = input.sorted()  // 昇順
-        
         print(sortedArray)
-        //  [35, 68, 80, 100]
     }
 
     /// 昇順に並び替え
-    func ascSortArray2() {
-        // 単純な配列の並び替えの場合
-        var input = [80, 100, 35, 68]
-        input.sort(by: { $0 < $1 })       // 昇順
-        print(input)
-        //  [35, 68, 80, 100]
+    /// Ex. input: [80, 100, 35, 68] -> [35, 68, 80, 100]
+    func ascSortArray2(input: [Int]) {
+        var output = input
+        output.sort(by: { $0 < $1 }) // 昇順
+        print(output)
     }
 
     /// 降順にさ並び替え
-    func descSortArray() {
-        // 単純な配列の並び替えの場合
-        var input = [80, 100, 35, 68]
-        input.sort(by: { $0 > $1 })       // 降順
-        print(input)
-        // [100, 80, 68, 35]
+    /// Ex. input: [80, 100, 35, 68] -> [100, 80, 68, 35]
+    func descSortArray(input: [Int]) {
+        var output = input
+        output.sort(by: { $0 > $1 }) // 降順
+        print(output)
     }
 
     /// 配列の最大値を取得
-    func maxInArray() {
-        let input = [20, 30, 100, 60]
+    /// Ex. input: [20, 30, 100, 60] -> 100
+    func maxInArray(input: [Int]) {
         print(input.max()!)
-        // 100
     }
 
     /// 配列の最小値を取得
-    func minInArray() {
-        let input = [20, 30, 100, 60]
+    /// Ex. input: [20, 30, 100, 60] -> 20
+    func minInArray(input: [Int]) {
         print(input.min()!)
-        // 20
     }
 
     /// 合計値を取得
-    func getSumArray() {
-        let subjectScore = [78, 80, 60, 55, 92]
-        let sum = subjectScore.reduce(0) { $0 + $1 }
+    /// Ex. input: [78, 80, 60, 55, 92] -> 365
+    func getSumArray(input: [Int]) {
+        let sum = input.reduce(0) { $0 + $1 }
         print(sum)
-        // 365
     }
 
     /// フィルタをかけた結果
-    func filteredArray() {
-        // 合格ボーダの点数が40点だとします。
-        let input = [20, 30, 100, 60]
-        let result = input.filter { $0 > 40 }
+    /// Ex. input: [20, 30, 100, 60], border: 40 -> [100, 60]
+    func filteredArray(input: [Int], border: Int) {
+        let result = input.filter { $0 > border }
         print(result)
-        // [100, 60]
     }
 
     /// 全ての要素に同じ処理をかける
-    func mappedArray() {
-        let input = "1 2 3 4 5"
+    /// Ex. input: "1 2 3 4 5" -> [1, 2, 3, 4, 5]
+    func mappedArray(input: String) {
         let array = input.components(separatedBy: .whitespaces)
         let intArray = array.map { Int($0)! }
         print(intArray)
-        // [1, 2, 3, 4, 5]
     }
 
     /// 全ての要素に同じ処理をかける(不要なものは除去)
-    func compactMappedArray() {
-        let input = "1 2 B 4 5"
+    /// Ex. input: "1 2 B 4 5" -> [1, 2, 4, 5]
+    func compactMappedArray(input: String) {
         let array = input.components(separatedBy: .whitespaces)
         let intArray = array.compactMap { Int($0) }
         print(intArray)
-        // [1, 2, 4, 5]
     }
 }

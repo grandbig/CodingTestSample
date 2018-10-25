@@ -141,12 +141,12 @@
 		2E5480E6217F6ED600444BFE /* String */ = {
 			isa = PBXGroup;
 			children = (
-				2E5480E7217F6EED00444BFE /* OtherStringSample.swift */,
 				2E5480E9217F716A00444BFE /* ArraySample.swift */,
+				2E5480F121820F9400444BFE /* ExtractStringSample.swift */,
 				2E5480EB217F76A300444BFE /* IntSample.swift */,
+				2E5480E7217F6EED00444BFE /* OtherStringSample.swift */,
 				2E5480ED217F78B300444BFE /* RegexSample.swift */,
 				2E5480EF21820F4C00444BFE /* SeparateStringSample.swift */,
-				2E5480F121820F9400444BFE /* ExtractStringSample.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";

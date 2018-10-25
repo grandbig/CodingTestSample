@@ -11,49 +11,40 @@ import Foundation
 class SeparateStringSample {
 
     /// 半角スペースで文字列分割
-    func separateString() {
-        // 与えられる入力値が "1 2 3 4 5"の場合
-        let input = "1 2 3 4 5"
+    /// Ex. input: "1 2 3 4 5" -> ["1", "2", "3", "4", "5"]
+    func separateString(input: String) {
         // 半角スペースで分割
         let array = input.components(separatedBy: .whitespaces)
         // 出力すると下記のようになります
         print(array)
-        // ["1", "2", "3", "4", "5"]
     }
 
     /// 数字で文字列分割
-    func separateDecimalDigits() {
-        // 数字で分割
-        let input = "a1b2c3d4e"
+    /// Ex. input: "a1b2c3d4e" -> ["a", "b", "c", "d", "e"]
+    func separateDecimalDigits(input: String) {
         let array = input.components(separatedBy: .decimalDigits)
         print(array)
-        // ["a", "b", "c", "d", "e"]
     }
 
     /// アルファベットで文字列分割
-    func separateLetters() {
-        // 小文字アルファベットで分割
-        let input = "1a2B3う4日5キ6"
+    /// Ex. input: "1a2B3う4日5キ6" -> ["1", "2", "3", "4", "5", "6"]
+    func separateLetters(input: String) {
         let array = input.components(separatedBy: .letters)
         print(array)
-        // ["1", "2", "3", "4", "5", "6"]
     }
 
     // アルファベット小文字でこ文字列分割
-    func separateLowercaseLetters() {
-        // 小文字アルファベットで分割
-        let input = "1a2b3c4D5"
+    /// Ex. input: "1a2b3c4D5" -> ["1", "2", "3", "4D5"]
+    func separateLowercaseLetters(input: String) {
         let array = input.components(separatedBy: .lowercaseLetters)
         print(array)
-        // ["1", "2", "3", "4D5"]
     }
 
     /// 記号で分割
-    func separatePunctuationCharacters() {
+    /// Ex. input: "1/2?3_4-5@6" -> ["1", "2", "3", "4", "5", "6"]
+    func separatePunctuationCharacters(input: String) {
         // 記号で分割
-        let input = "1/2?3_4-5@6"
         let array = input.components(separatedBy: .punctuationCharacters)
         print(array)
-        // ["1", "2", "3", "4", "5", "6"]
     }
 }
