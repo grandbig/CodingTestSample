@@ -13,20 +13,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let stringSample = StringSample()
-        stringSample.separateString()
-        stringSample.separateDecimalDigits()
-        stringSample.separateLetters()
-        stringSample.separateLowercaseLetters()
-        stringSample.separatePunctuationCharacters()
-        stringSample.reverseRead()
-        stringSample.deleteFinalCharacter()
-        stringSample.deleteFinalCharacter2()
-        stringSample.deleteFinalCharacter3()
-        stringSample.extractCharacter()
-        stringSample.extractCharacter2()
-        stringSample.offsetCharacter()
-        
+        let otherStringSample = OtherStringSample()
+        otherStringSample.reverseRead()
+        otherStringSample.replaceCharacter()
+
+        let separateStringSample = SeparateStringSample()
+        separateStringSample.separateString()
+        separateStringSample.separateDecimalDigits()
+        separateStringSample.separateLetters()
+        separateStringSample.separateLowercaseLetters()
+        separateStringSample.separatePunctuationCharacters()
+
+        let extractStringSample = ExtractStringSample()
+        extractStringSample.deleteFinalCharacter()
+        extractStringSample.deleteFinalCharacter2()
+        extractStringSample.deleteFinalCharacter3()
+        extractStringSample.extractCharacter()
+        extractStringSample.extractCharacter2()
+        extractStringSample.offsetCharacter()
+
         let arraySample = ArraySample()
         arraySample.ascSortArray()
         arraySample.ascSortArray2()
@@ -37,7 +42,7 @@ class ViewController: UIViewController {
         arraySample.filteredArray()
         arraySample.mappedArray()
         arraySample.compactMappedArray()
-        
+
         let intSample = IntSample()
         intSample.changeToBinaryNumber()
         intSample.changeToOctalNumber()
