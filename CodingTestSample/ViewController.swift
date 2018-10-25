@@ -48,6 +48,12 @@ class ViewController: UIViewController {
         intSample.changeToBinaryNumber(input: 10)
         intSample.changeToOctalNumber(input: 10)
         intSample.changeToHexadecimal(input: 10)
+        intSample.ceilNum(input: 3.14)
+        intSample.ceilNum(input: 3.14, decimal: 1)
+        intSample.roundNum(input: 3.14)
+        intSample.roundNum(input: 3.14, decimal: 1)
+        intSample.floorNum(input: 3.14)
+        intSample.floorNum(input: 3.14, decimal: 1)
 
         // 正規表現
         let regexSample = RegexSample()
