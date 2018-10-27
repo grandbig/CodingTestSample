@@ -31,6 +31,14 @@ class IntSample {
         print(result)
     }
 
+    /// ○○進数から10進数に変換
+    /// Ex. input: 1010, radix: 2 -> 10
+    func changeToDecimal(input: String, radix: Int) {
+        if let result = Int(input, radix: radix) {
+            print(result)
+        }
+    }
+
     /// 切り上げ
     /// Ex. input: 3.14 -> 4.0
     func ceilNum(input: Double) {

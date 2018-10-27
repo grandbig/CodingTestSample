@@ -48,6 +48,7 @@ class ViewController: UIViewController {
         intSample.changeToBinaryNumber(input: 10)
         intSample.changeToOctalNumber(input: 10)
         intSample.changeToHexadecimal(input: 10)
+        intSample.changeToDecimal(input: "1010", radix: 2)
         intSample.ceilNum(input: 3.14)
         intSample.ceilNum(input: 3.14, decimal: 1)
         intSample.roundNum(input: 3.14)

@@ -35,12 +35,6 @@ class ExtractStringSample {
     /// 指定番目の文字を取得
     /// Ex. input: "123456789", th: 3 -> 3
     func extractCharacter(input: String, th: Int) {
-//        let endIntTh = th + 1
-//        guard let startUnicodeScalarTh = UnicodeScalar(th), let endUnicodeScalarTh = UnicodeScalar(endIntTh) else {
-//            return
-//        }
-//        let startCharacterTh = Character(startUnicodeScalarTh)
-//        let endCharacterTh = Character(endUnicodeScalarTh)
         let endIntTh = th + 1
         let startStringTh = String(th)
         let endStringTh = String(endIntTh)
