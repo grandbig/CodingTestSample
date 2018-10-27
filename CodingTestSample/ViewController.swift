@@ -12,6 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        exampleMethod()
+    }
+
+    private func exampleMethod() {
+        print("=== exampleMethod START ===")
 
         let otherStringSample = OtherStringSample()
         otherStringSample.reverseRead(input: "swift")
@@ -63,13 +68,15 @@ class ViewController: UIViewController {
         } else {
             print("not match")
         }
-        
+
         var hoge: [String] = []
         _ = regexSample.pregMatche(input: "title=ABCDE&body=FGHIJ", pattern: "^title=.*&body", matches: &hoge)
         print(hoge)
-        
+
         let fuga = regexSample.pregReplace(input: "title=ABCDE&body=FGHIJ", pattern: "^title=.*&body", with: "title=abcde&body")
         print(fuga)
+
+        print("=== exampleMethod FINISH ===")
     }
 }
 
