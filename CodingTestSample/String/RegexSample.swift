@@ -29,8 +29,8 @@ class RegexSample {
         }
         let targetStringRange = NSRange(location: 0, length: input.count)
         let results = regex.matches(in: input, options: [], range: targetStringRange)
-        for i in 0 ..< results.count{
-            for j in 0 ..< results[i].numberOfRanges{
+        for i in 0 ..< results.count {
+            for j in 0 ..< results[i].numberOfRanges {
                 let range = results[i].range(at: j)
                 matches.append((input as NSString).substring(with: range))
             }

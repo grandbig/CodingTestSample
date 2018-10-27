@@ -33,7 +33,7 @@ class SeparateStringSample {
         print(array)
     }
 
-    // アルファベット小文字でこ文字列分割
+    // アルファベット小文字で文字列分割
     /// Ex. input: "1a2b3c4D5" -> ["1", "2", "3", "4D5"]
     func separateLowercaseLetters(input: String) {
         let array = input.components(separatedBy: .lowercaseLetters)

@@ -25,7 +25,7 @@ class ArraySample {
         print(output)
     }
 
-    /// 降順にさ並び替え
+    /// 降順に並び替え
     /// Ex. input: [80, 100, 35, 68] -> [100, 80, 68, 35]
     func descSortArray(input: [Int]) {
         var output = input
