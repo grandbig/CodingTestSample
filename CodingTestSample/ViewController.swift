@@ -37,6 +37,7 @@ class ViewController: UIViewController {
         extractStringSample.extractCharacter(input: "123456789", th: 3)
         extractStringSample.extractCharacter2(input: "123456789", th: 3)
         extractStringSample.offsetCharacter(input: "ABCDEFG", char: "D")
+        extractStringSample.offsetCharacter(input: "123456789", from: 3, to: 8)
 
         let arraySample = ArraySample()
         arraySample.ascSortArray(input: [80, 100, 35, 68])

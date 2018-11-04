@@ -61,4 +61,13 @@ class ExtractStringSample {
             print(offset + 1)
         }
     }
+
+    /// Swift3までの算出方法 - deprecated なので利用しないようにしましょう
+    /// 何文字目〜何文字目の文字列を取得
+    /// Ex. input: "123456789", from: 3, to: 8 -> 45678
+    func offsetCharacter(input: String, from: Int, to: Int) {
+        let range = input.index(input.startIndex, offsetBy: from)..<input.index(input.startIndex, offsetBy: to)
+        let num = input.substring(with: range)
+        print(num)
+    }
 }

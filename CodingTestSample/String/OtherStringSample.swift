@@ -18,11 +18,10 @@ class OtherStringSample {
             result = result + String(i)
         }
         print(result)
-        // tfiws
     }
 
     /// 文字列置換
-    /// Ex. input: "ABCDE", from: "ABC", to: "abc" -> abcDEFG
+    /// Ex. input: "ABCDE", from: "ABC", to: "abc" -> abcDE
     func replaceCharacter(input: String, from: String, to: String) {
         let replacedString = input.replacingOccurrences(of: from, with: to)
         print(replacedString)
